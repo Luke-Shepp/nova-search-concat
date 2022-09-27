@@ -2,6 +2,7 @@
     "name": "shepp/nova-concat-search",
     "description": "Search by Concatenated fields in Laravel Nova",
     "type": "library",
+    "license": "GPL-3.0-only",
     "require": {
         "laravel/nova": "^3.31",
         "php": "^8.0"
