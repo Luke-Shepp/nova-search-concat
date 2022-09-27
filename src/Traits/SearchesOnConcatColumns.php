@@ -34,7 +34,6 @@ trait SearchesOnConcatColumns
             $likeOperator = $connectionType == 'pgsql' ? 'ilike' : 'like';
 
             foreach (static::searchableColumns() as $column) {
-                // Custom functionality
                 if (is_array($column)) {
                     static::queryConcatColumns(
                         $query,
@@ -42,7 +41,6 @@ trait SearchesOnConcatColumns
                         $likeOperator,
                         $search
                     );
-                // End Custom functionality
                 } else {
                     $query->orWhere(
                         $model->qualifyColumn($column),
